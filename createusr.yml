@@ -15,7 +15,7 @@
         mode: 0700
      - name: Upload SSH key
        copy:
-        src: ./root/sshmaster.pub
+        src: /root/sshmaster.pub
         dest: ~devops/.ssh/id_rsa
         owner: devops
         group: devops
