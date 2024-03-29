@@ -1,0 +1,5 @@
+---
+- name: Create User
+  command: useradd -m -s /bin/bash devops
+- name: Create .ssh Folder
+  command: mkdir ~devops/.ssh
