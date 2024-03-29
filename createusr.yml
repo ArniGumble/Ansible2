@@ -1,6 +1,6 @@
 ---
 - name: Create user
-  hosts: remote_host
+  hosts: ALL
   remote_user: root
   tasks:
     - name: Create new user
