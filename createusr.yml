@@ -1,3 +1,4 @@
+---
 - name: Create user
   hosts: remote_host
   remote_user: root
