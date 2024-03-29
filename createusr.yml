@@ -1,0 +1,21 @@
+- name: Create user
+  hosts: remote_host
+  remote_user: root
+  tasks:
+    - name: Create new user
+      user:
+        name: devops
+    - name: Create .ssh folder
+      file:
+        path: ~devops/.ssh
+        state: directory
+        owner: devops
+        group: devops
+        mode: 0700
+     - name: Upload SSH key
+       copy:
+        src: ./root/sshmaster.pub
+        dest: ~devops/.ssh/id_rsa
+        owner: devops
+        group: devops
+        mode: 0700
